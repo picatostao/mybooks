@@ -8,7 +8,8 @@ import { HomeComponent } from './pages/home/home.component';
 import { FormRegisterComponent } from './component/form-register/form-register.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { ProfileComponent } from './pages/profile/profile.component';
-import { MyProfileComponent } from './component/my-profile/my-profile.component'
+import { MyProfileComponent } from './component/my-profile/my-profile.component';
+import { BooksComponent } from './pages/books/books.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,6 +20,7 @@ import { MyProfileComponent } from './component/my-profile/my-profile.component'
     RegisterComponent,
     ProfileComponent,
     MyProfileComponent,
+    BooksComponent,
   ],
   imports: [
     BrowserModule,

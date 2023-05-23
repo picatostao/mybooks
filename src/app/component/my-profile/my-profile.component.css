@@ -1,34 +1,42 @@
 .bgColor{
     background-color: black;
-    height: 840px;
-    width: 1880px;
+    height: 675px;
+    width: 100vw;
+   
+    
 }
 .contentX{
-    height: 830px;
-    width: 1880px;
-    background-image:url("/ssets/Picsart_23-05-22_16-24-09-895.png");
-    background-size: 80% 80%;
+    height: 675px;
+    width: 100vw;
+    background-image:url("/assets/Picsart_23-05-22_16-24-09-895.png");
+    background-size:75% auto;
     background-repeat: no-repeat;
     background-position: center;
     background-position-y: 80px;
-    filter: brightness(1);
     display: flex;
     flex-direction: row;
+  
 }
 .marginX{
-    height: 830px;
+    height: 675px;
     width: 400px;
+    
+    
 
 }
 .contentY{
-    height: 830px;
+    height: 675px;
     width: 1080px;
+    
+   
 
 
 }
 .marginY{
-    height: 150px;    
+    height:100px;    
     width: 1080px;
+   
+    
 }
 .card{
     height: 530px;    
@@ -36,6 +44,8 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    
+   
 }
 
 .user{
@@ -44,16 +54,22 @@
     border: 1px solid white;
     display: flex;
     flex-direction: row;
+    background-color: rgb(0, 0, 0,0.8);
+    border-radius: 20px;
 }
 
 .marginY_{
     height: 530px;
     width: 75px;
+    
+    
    
 }
 .userPrint{
     height: 530px;
     width: 350px;
+    
+    
     
 }
 .marginX_{
@@ -62,7 +78,8 @@
     display: flex;
     flex-direction:row;
     align-items: center;
-    justify-content: space-around; 
+    justify-content: space-around;
+    
 }
 .datos{
     height: 430px;
@@ -71,11 +88,11 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+     
 }
 .photo{
     height: 150px;
-    width: 150px;
-    border: 1px solid white;   
+    width: 150px;  
 }
 .dat{
     height: 20px;
@@ -90,24 +107,32 @@
     border: 5px solid white;
     border-style:double;
     color: white;
+    display: flex;
+    flex-direction: column;
     text-align: center;
+    justify-content:space-around;
     font-size: xx-large;
+    border-radius: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 .contain1{
     height: 20px;
-    width: 150px;
+    width: 100px;
     color: white;
     text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 .contain{
     height: 20px;
-    width: 150px;
+    width: 200px;
     border: 1px solid white;
     color: white;
     text-align:justify;
     align-items:start;
     display: flex;
     flex-direction: row;
+    border-radius: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 .minimarg{
     height: 20px;
@@ -130,6 +155,8 @@ input{
     background-color: black;
     color: white;
     text-align: center;
+    border-radius: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 button{
     height: 100px;
@@ -138,6 +165,8 @@ button{
     border:1px solid white;
     color: white;
     font-size: xx-large;
+    border-radius: 50px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 

@@ -1,21 +1,30 @@
 .formulario{
-    height: 840px;
-    width:1880px;
+    height: 675px;
+    width:100vw;
     background-color: black;
     display: flex;
     flex-direction:column; 
     align-items:center;
     align-content: center; 
     justify-content: space-around;
-   
-
 }
 
 .formin{
     height: 500px;
     width: 177px;
     text-align: center;
+   
 }
 .inf{
     color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+input{
+    height: 20px;
+    width: 170px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    border-radius: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
