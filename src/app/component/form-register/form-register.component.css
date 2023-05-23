@@ -1,0 +1,21 @@
+.formulario{
+    height: 840px;
+    width:1880px;
+    background-color: black;
+    display: flex;
+    flex-direction:column; 
+    align-items:center;
+    align-content: center; 
+    justify-content: space-around;
+   
+
+}
+
+.formin{
+    height: 500px;
+    width: 177px;
+    text-align: center;
+}
+.inf{
+    color: white;
+}

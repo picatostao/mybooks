@@ -1,0 +1,143 @@
+.bgColor{
+    background-color: black;
+    height: 840px;
+    width: 1880px;
+}
+.contentX{
+    height: 830px;
+    width: 1880px;
+    background-image:url("/ssets/Picsart_23-05-22_16-24-09-895.png");
+    background-size: 80% 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-y: 80px;
+    filter: brightness(1);
+    display: flex;
+    flex-direction: row;
+}
+.marginX{
+    height: 830px;
+    width: 400px;
+
+}
+.contentY{
+    height: 830px;
+    width: 1080px;
+
+
+}
+.marginY{
+    height: 150px;    
+    width: 1080px;
+}
+.card{
+    height: 530px;    
+    width: 1080px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.user{
+    height: 530px;
+    width: 500px;
+    border: 1px solid white;
+    display: flex;
+    flex-direction: row;
+}
+
+.marginY_{
+    height: 530px;
+    width: 75px;
+   
+}
+.userPrint{
+    height: 530px;
+    width: 350px;
+    
+}
+.marginX_{
+    height: 50px;
+    width: 350px;
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: space-around; 
+}
+.datos{
+    height: 430px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.photo{
+    height: 150px;
+    width: 150px;
+    border: 1px solid white;   
+}
+.dat{
+    height: 20px;
+    width: 300px; display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;  
+}
+.contain0{
+    height: 40px;
+    width: 300px;
+    border: 5px solid white;
+    border-style:double;
+    color: white;
+    text-align: center;
+    font-size: xx-large;
+}
+.contain1{
+    height: 20px;
+    width: 150px;
+    color: white;
+    text-align: center;
+}
+.contain{
+    height: 20px;
+    width: 150px;
+    border: 1px solid white;
+    color: white;
+    text-align:justify;
+    align-items:start;
+    display: flex;
+    flex-direction: row;
+}
+.minimarg{
+    height: 20px;
+    width: 5px;
+}
+
+.editUser{
+    height: 530px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+}
+img{
+    max-width: 100%;
+    max-height: auto;
+}
+input{
+    height: 20px;
+    width: 150px;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+button{
+    height: 100px;
+    width: 300px;
+    background-color: black;
+    border:1px solid white;
+    color: white;
+    font-size: xx-large;
+}
+
+
