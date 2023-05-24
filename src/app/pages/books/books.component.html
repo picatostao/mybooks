@@ -3,7 +3,7 @@
         <ng-contairner *ngFor="let book of books;let par= even">
         <div class="card" >
             <div class="imagen"><img class="portad" src="{{book.photo}}" alt=""></div>
-            <div class="type">id-{{book.id_book}}</div>
+            <div class="type">id-{{book.id_book|primerpipe}}</div>
             <div class="margin"></div>
             <div class="title">{{book.title}}</div>
             <div class="margin"></div>
