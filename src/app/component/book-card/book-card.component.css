@@ -1,0 +1,26 @@
+.card{
+    height: 400px;
+    width: 300px;
+    border: 1px  solid white;
+    background-color: rgb(0, 0,0, 0.9);
+}
+.imagen{
+    height: 150px;
+    width: 300px;
+    border: 1px solid white;
+}
+.footImg{
+    height: 20px;
+    width: 300px;
+    border: 1px solid white;
+}
+.margin{
+    height: 5px;
+    width: 300px;
+    border: 1px solid white;
+}
+.title{
+    height: 30px;
+    width: 300px;
+    border: 1px solid white;
+}

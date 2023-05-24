@@ -17,14 +17,17 @@ a{
 }
 .nav{
     color: white;
-    border: 1px solid white;
+    border-bottom: 1px solid white;
+    border-left:1px solid white ;
+    border-right:1px solid white ;
     height: 100px;
     width: 200px;
     text-align: center;
     align-content: center;
     font-size: 30px;
     justify-content: center;
-    border-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
     
 }
 h1{

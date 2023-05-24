@@ -9,7 +9,8 @@ import { FormRegisterComponent } from './component/form-register/form-register.c
 import { RegisterComponent } from './pages/register/register.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { MyProfileComponent } from './component/my-profile/my-profile.component';
-import { BooksComponent } from './pages/books/books.component'
+import { BooksComponent } from './pages/books/books.component';
+import { BookCardComponent } from './component/book-card/book-card.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,6 +22,7 @@ import { BooksComponent } from './pages/books/books.component'
     ProfileComponent,
     MyProfileComponent,
     BooksComponent,
+    BookCardComponent,
   ],
   imports: [
     BrowserModule,

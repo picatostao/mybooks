@@ -1,5 +1,5 @@
 .portada{
-    height: 675px;
+    height: 88vh;
     width: 100vw;
     background-color: black;
     text-align: center;
@@ -12,5 +12,5 @@
 }
 img{
     max-width: auto;
-    max-height: 50%;
+    max-height: 60%;
 }

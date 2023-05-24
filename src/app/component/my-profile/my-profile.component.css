@@ -1,12 +1,10 @@
 .bgColor{
     background-color: black;
-    height: 675px;
-    width: 100vw;
-   
-    
+    height: 88vh;
+    width: 100vw;  
 }
 .contentX{
-    height: 675px;
+    height: 88vh;
     width: 100vw;
     background-image:url("/assets/Picsart_23-05-22_16-24-09-895.png");
     background-size:75% auto;
@@ -18,14 +16,15 @@
   
 }
 .marginX{
-    height: 675px;
+    height: 88vh;
     width: 400px;
+    
     
     
 
 }
 .contentY{
-    height: 675px;
+    height:88vh;
     width: 1080px;
     
    
@@ -33,8 +32,9 @@
 
 }
 .marginY{
-    height:100px;    
+    height:180px;    
     width: 1080px;
+   
    
     
 }

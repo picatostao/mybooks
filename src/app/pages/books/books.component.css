@@ -1,0 +1,22 @@
+.fondo{
+    height: 88vh;
+    width: 100vw;
+    background-image:url("/assets/Picsart_23-05-22_16-24-09-895.png");
+    background-size:75% auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-y: 80px;
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.margen{
+    height: 80vh;
+    width: 90vw;   
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+}
