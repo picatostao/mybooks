@@ -1,5 +1,39 @@
 <div class="fondo">
     <div class="margen">
-        <app-book-card></app-book-card>
+        <ng-contairner *ngFor="let book of books;let par= even">
+        <div class="card" >
+            <div class="imagen"><img class="portad" src="{{book.photo}}" alt=""></div>
+            <div class="type">id-{{book.id_book}}</div>
+            <div class="margin"></div>
+            <div class="title">{{book.title}}</div>
+            <div class="margin"></div>
+            <div class="contenido"> Autor:{{book.author}} <br> Estilo:{{book.type}}
+            </div>
+            <div class="price">{{book.price}} €</div>
+            <div class="buy"><button class="but" [ngClass]='{"but2" : par , "but" : !even}'  >BUY</button></div>
+        </div>
+    </ng-contairner>
+    <div *ngIf="books.length===0" style="color: white;"> no hay libros</div>
+    </div>
+    <div class="formulario">
+        <div class="headform"><h1>AÑADIR LIBROS</h1></div>
+        <div class="inputs">
+            <p>ID.BOOK</p>
+            <input type="number" #input0>
+            <p>ID.USER</p>
+            <input type="number" #input1>
+            <p>TITULO</p>
+            <input type="text" #input2>
+            <p>ESTILO</p>
+            <input type="text" #input3>
+            <p>AUTOR</p>
+            <input type="text" #input4>
+            <p>PRECIO</p>
+            <input type="number" #input5>
+            <p>IMAGEN</p>
+            <input type="text" #input6>
+            <button class="but2" (click)="nuevoslibros(input0,input1,input2,input3,input4,input5,input6)">AÑADIR</button>
+            
+        </div>
     </div>
 </div>

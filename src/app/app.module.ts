@@ -10,7 +10,8 @@ import { RegisterComponent } from './pages/register/register.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { MyProfileComponent } from './component/my-profile/my-profile.component';
 import { BooksComponent } from './pages/books/books.component';
-import { BookCardComponent } from './component/book-card/book-card.component'
+import { BookCardComponent } from './component/book-card/book-card.component';
+import { Pipe1Pipe } from './pipes/pipe1.pipe'
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,6 +24,7 @@ import { BookCardComponent } from './component/book-card/book-card.component'
     MyProfileComponent,
     BooksComponent,
     BookCardComponent,
+    Pipe1Pipe,
   ],
   imports: [
     BrowserModule,
