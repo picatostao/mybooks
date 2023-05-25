@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { Book } from 'src/app/models/book';
+import { BookCardComponent } from 'src/app/component/book-card/book-card.component';
 @Component({
   selector: 'app-books',
   templateUrl: './books.component.html',
@@ -36,5 +37,8 @@ public nuevoslibros(idBookin:HTMLInputElement,idUserin:HTMLInputElement,titlein:
    }
    this.books.push(newBook)
   }
-
+  public borrar(books:Book){
+    let x = this.books.filter(v=> v.id_book != books.id_book)
+    this.books=x
+  }
 }

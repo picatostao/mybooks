@@ -1,18 +1,8 @@
 <div class="fondo">
     <div class="margen">
-        <ng-contairner *ngFor="let book of books;let par= even">
-        <div class="card" >
-            <div class="imagen"><img class="portad" src="{{book.photo}}" alt=""></div>
-            <div class="type">id-{{book.id_book|primerpipe}}</div>
-            <div class="margin"></div>
-            <div class="title">{{book.title}}</div>
-            <div class="margin"></div>
-            <div class="contenido"> Autor:{{book.author}} <br> Estilo:{{book.type}}
-            </div>
-            <div class="price">{{book.price}} €</div>
-            <div class="buy"><button class="but" [ngClass]='{"but2" : par , "but" : !even}'  >BUY</button></div>
-        </div>
-    </ng-contairner>
+        <ng-contairner *ngFor="let book of books;let even = even">
+            <app-book-card [bookCard]="book" [espar]="even" (borrar_)="borrar($event)"></app-book-card>
+        </ng-contairner>
     <div *ngIf="books.length===0" style="color: white;"> no hay libros</div>
     </div>
     <div class="formulario">
