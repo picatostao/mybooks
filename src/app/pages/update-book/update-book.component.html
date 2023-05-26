@@ -1,12 +1,6 @@
 <div class="fondo">
-    <div class="margen">
-        <ng-contairner *ngFor="let book of books;let even = even">
-            <app-book-card [bookCard]="book" [espar]="even" (borrar_)="borrar($event)"></app-book-card>
-        </ng-contairner>
-    <div *ngIf="books.length===0" style="color: white;"> no hay libros</div>
-    </div>
     <div class="formulario">
-        <div class="headform"><h1>AÑADIR LIBROS</h1></div>
+        <div class="headform"><h1>MODIFICAR LIBROS</h1></div>
         <div class="inputs">
             <p>ID.BOOK</p>
             <input type="number" #input0>
@@ -22,7 +16,7 @@
             <input type="number" #input5>
             <p>IMAGEN</p>
             <input type="text" #input6>
-            <button class="but2" (click)="newBook(+input0.value,+input1.value,input2.value,input3.value,input4.value,+input5.value,input6.value)">AÑADIR</button>
+            <button class="but">MODIFICAR</button>
             
         </div>
     </div>

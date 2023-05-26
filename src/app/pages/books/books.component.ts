@@ -17,25 +17,18 @@ constructor(){
   ]
   
 }
-public nuevoslibros(idBookin:HTMLInputElement,idUserin:HTMLInputElement,titlein:HTMLInputElement,typein:HTMLInputElement,authorin:HTMLInputElement,pricein:HTMLInputElement,photoin:HTMLInputElement){
-   let idB = idBookin
-   let idU= idUserin
-   let titin=titlein
-   let typin=typein
-   let autin=authorin
-   let pricin=pricein
-   let photin=photoin
+public nuevoslibros(){
+  }
+  newBook(newID: number,
+          newIDUser: number,
+          newTitle: string,
+          newType: string,
+          newAuthor: string,
+          newPrice: number,
+          newPhoto: string){
+    let nuevo: Book = new Book(newID,newIDUser, newTitle,newType,newAuthor,newPrice,newPhoto)
+    this.books.push(nuevo)
 
-   let newBook : Book ={
-      id_book : parseInt(idB.value),
-      id_user : parseInt(idU.value),
-      title : titin.value,
-      type: typin.value,
-      author: autin.value,
-      price: parseInt(pricin.value),
-      photo:photin.value
-   }
-   this.books.push(newBook)
   }
   public borrar(books:Book){
     let x = this.books.filter(v=> v.id_book != books.id_book)

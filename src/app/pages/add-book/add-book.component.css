@@ -1,0 +1,68 @@
+.fondo{
+    height: 88vh;
+    width: 100vw;
+    background-image:url("/assets/Picsart_23-05-22_16-24-09-895.png");
+    background-size:75% auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-y: 80px;
+    display: flex;
+    flex-direction: row;
+    background-color:black;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.formulario{
+    height: 70vh;
+    width: 50vw;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgb(0, 0,0, 0.9);
+}
+.headform{
+    height: 5vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+}
+.inputs{
+    height: 65vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+input{
+    height: 25px;
+    width: 400px;
+    background-color: rgb(0, 0,0,0.1);
+    color: white;
+    text-align: center;
+    border-radius: 20px;
+}
+.portad{
+    max-height: 100%;
+    max-width: auto;
+    flex-direction: r;
+    align-items: center;
+
+}
+p{
+    color: white;
+}
+.but{
+    width: 200px;
+    height:34px;
+    border-radius: 20px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border: 1px solid white;
+}

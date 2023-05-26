@@ -12,6 +12,8 @@ import { MyProfileComponent } from './component/my-profile/my-profile.component'
 import { BooksComponent } from './pages/books/books.component';
 import { BookCardComponent } from './component/book-card/book-card.component';
 import { PrimerpipePipe } from './pipes/primerpipe.pipe';
+import { AddBookComponent } from './pages/add-book/add-book.component';
+import { UpdateBookComponent } from './pages/update-book/update-book.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,8 @@ import { PrimerpipePipe } from './pipes/primerpipe.pipe';
     BooksComponent,
     BookCardComponent,
     PrimerpipePipe,
+    AddBookComponent,
+    UpdateBookComponent,
  
   ],
   imports: [
