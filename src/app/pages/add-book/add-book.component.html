@@ -16,11 +16,8 @@
             <input type="number" #input5>
             <p>IMAGEN</p>
             <input type="text" #input6>
-            <button class="but">AÑADIR</button>
+            <button class="but" (click)="newBook(+input0.value,+input1.value,input2.value,input3.value,input4.value,+input5.value,input6.value)">AÑADIR</button>
             
         </div>
     </div>
 </div>
-
-
-<!-- (click)="newBook(+input0.value,+input1.value,input2.value,input3.value,input4.value,+input5.value,input6.value)" -->

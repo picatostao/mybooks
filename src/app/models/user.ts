@@ -6,7 +6,7 @@ export class User {
                 public photo:string,
                 public password:string){
                     
-                }
+                };
                 public userInfo():string{
                     return this.name+" "+this.last_name
                 }

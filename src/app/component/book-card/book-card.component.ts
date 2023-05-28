@@ -11,13 +11,13 @@ import { Book } from 'src/app/models/book';
 export class BookCardComponent implements OnInit{
   @Input() bookCard:Book;
   @Input() espar:boolean;
-  @Output() borrar_=new EventEmitter<Book> ()
+  @Input() libro:any;
+  @Output() borrar_=new EventEmitter<Book> ();
   constructor(){}
   
   ngOnInit():void{}
-
   public borrar(){
-    this.borrar_.emit(this.bookCard)
+    this.borrar_.emit(this.bookCard);
   }
 }
 

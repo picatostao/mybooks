@@ -2,21 +2,20 @@
     <div class="formulario">
         <div class="headform"><h1>MODIFICAR LIBROS</h1></div>
         <div class="inputs">
-            <p>ID.BOOK</p>
-            <input type="number" #input0>
-            <p>ID.USER</p>
-            <input type="number" #input1>
             <p>TITULO</p>
-            <input type="text" #input2>
-            <p>ESTILO</p>
-            <input type="text" #input3>
+            <input type="text" #input0 [value]="updatedbook?.title">
+            <p>TIPO</p>
+            <input type="text" #input1 [value]="updatedbook?.type">
             <p>AUTOR</p>
-            <input type="text" #input4>
+            <input type="text" #input2 [value]="updatedbook?.author">
             <p>PRECIO</p>
-            <input type="number" #input5>
+            <input type="number" #input3 [value]="updatedbook?.price">
             <p>IMAGEN</p>
-            <input type="text" #input6>
-            <button class="but">MODIFICAR</button>
+            <input type="text" #input4 [value]="updatedbook?.photo">
+            <p>ID</p>
+            <input type="number" #input5 [value]=" updatedbook?.id_book">
+            <button class="but" (click)="search(+input5.value)">Buscar</button>
+            <button class="but" (click)="updateBook(input0.value,input1.value,input2.value,input3.value,input4.value,input5.value)">MODIFICAR</button>
             
         </div>
     </div>
