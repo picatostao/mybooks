@@ -1,9 +1,10 @@
 .card{
-    height: 360px;
+    height: 400px;
     width: 205px;
-    background-color: rgb(0, 0,0, 0.9);
+    background-color: var(--transp);
     color: white;
     border-radius: 20px;
+   
     
 }
 .imagen{
@@ -27,21 +28,18 @@
     color: white;
     text-align: center;
     font-size: 10px;
-    font-family:var(--letra)
+    font-family:var(--letra);
+  
 }
-.margin{
-    height: 5px;
-    width: 300px;
-    color: white;
-    
-}
+
 .title{
-    height: 30px;
+    height: 60px;
     width: 200px;
     color: white;
     text-align: center;
-    font-size: 28px;
-    font-family:var(--letra)
+    font-size: 20px;
+    font-family:var(--letra);
+    
 }
 .contenido{
     height:70px ;
@@ -64,17 +62,30 @@
     height:34px;
     border-radius: 20px;
     background-color: white;
-    font-family:var(--letra)
+    font-family:var(--letra);
+    border: 1px solid white;
+    transition: 3s;
 }
+    .but:hover{
+        background-color:var(--oscuro) ;
+        color: white;
+        transition: 3s;
+    }
 .but2{
     width: 200px;
     height:34px;
     border-radius: 20px;
-    background-color:black;
+    background-color:var(--oscuro);
     color: white;
     border:1px solid white;
-    font-family: var(--letra)
+    font-family: var(--letra);
+    transition: 3s;
 }
+    .but2:hover{
+        background-color: rgb(255, 253, 253, 0.9) ;
+        color: black;
+        transition: 3s;
+    }
 .portad{
     max-height: 100%;
     max-width: auto;

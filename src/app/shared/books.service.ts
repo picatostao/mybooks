@@ -13,9 +13,9 @@ export class BooksService {
   constructor() 
   { 
     this.book_=[
-      new Book(117,117,"hola","tipo","autor",10,"https://upload.wikimedia.org/wikipedia/en/d/da/Sin_City_Hard_Goodbye.jpg"),
-      new Book(118,118,"titulo1","tipo1","autor1",11,"https://upload.wikimedia.org/wikipedia/en/d/da/Sin_City_Hard_Goodbye.jpg"),
-      new Book(119,119,"titulo2","tipo2","autor2",12,"https://upload.wikimedia.org/wikipedia/en/d/da/Sin_City_Hard_Goodbye.jpg"),
+      new Book(117,117,"Sin noticias de Gurb","De bolsillo","Eduardo Mendoza",12,"https://i.pinimg.com/originals/af/3e/83/af3e832a5b849f48a9839a044f9ced7b.jpg"),
+      new Book(118,118,"La inteligencia fracasada","De bolsillo","Jose Antonio Marina",10,"https://www.anagrama-ed.es/uploads/media/portadas/0001/13/ecb806fef2126f22ccb414df909745c3580f084b.jpeg"),
+      new Book(119,119,"El capitán Alatriste","Tapa dura","Arturo Perez Reverte",15,"https://www.perezreverte.com/upload/fotos/libros/201002/alatristeanotado_med.jpg"),
     ] 
   }
   public getAll():Book[]{

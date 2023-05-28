@@ -22,7 +22,7 @@
 input{
     height: 20px;
     width: 170px;
-    background-color: black;
+    background-color: var(--oscuro);
     color: white;
     text-align: center;
     border-radius: 20px;

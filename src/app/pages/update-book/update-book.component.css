@@ -65,4 +65,13 @@ p{
     background-color: var(--oscuro);
     color: white;
     border: 1px solid white;
-    font-family: var(--letra)}
+    font-family: var(--letra);
+    transition: 3s;
+}
+    
+    
+    .but:hover{
+        background-color: rgb(255, 253, 253, 0.9) ;
+        color: black;
+        transition: 3s;
+    }
