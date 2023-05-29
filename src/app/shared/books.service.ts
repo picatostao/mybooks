@@ -33,7 +33,7 @@ export class BooksService {
       this.book_[update]={...book};
       return true;
     }
-    return false;
+
   }
   public delete(id_book:number):boolean{
    this.book_=this.book_.filter(book1 => book1.id_book !== id_book);

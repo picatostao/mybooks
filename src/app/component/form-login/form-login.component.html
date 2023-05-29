@@ -1,0 +1,32 @@
+<form class="mb-4" #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
+    <div class="formulario">
+        <div class="head"></div>
+        <div class="formin">
+            
+            <div class="form-group">
+            <h3  class="inf">CORREO ELECTRONICO</h3>
+            <input class="form-control" type="email" name="mail" [(ngModel)]="logino.email" #emailId="ngModel" 
+            [ngClass]="{ 'is-invalid': (emailId.dirty || emailId.touched) && emailId.invalid }" email required>
+            <div *ngIf="(emailId.dirty || emailId.touched) && emailId.invalid" class="invalid-feedback">
+                <div *ngIf="emailId.errors.required" style="color: white;font-family: var(--letra);">La dirección de email es obligatoria</div>
+                <div *ngIf="emailId.errors.email"style="color: white;font-family: var(--letra);" >Dirección email incorrecta</div>
+              </div>
+            </div>
+
+            <div class="form-group">
+            <h3 class="inf">CONTRASEÑA</h3>
+            <input class="form-control" type="password" name="password" [(ngModel)]="logino.password" #passwordId="ngModel"
+            [ngClass]="{ 'is-invalid': (passwordId.dirty || passwordId.touched) && passwordId.invalid }" minlength="8" required>
+            <div *ngIf="(passwordId.dirty || passwordId.touched) && passwordId.invalid" class="invalid-feedback">
+                <div *ngIf="passwordId.errors.required" style="color: white;font-family: var(--letra);">La clave es obligatoria</div>
+                <div *ngIf="passwordId.errors.minlength" style="color: white;font-family: var(--letra);">La clave debe tener al menos 8 caracteres</div>
+              </div>
+            </div>
+            
+            <br>
+            <button class="btn btn-danger btn-block" [disabled]="userForm.invalid">add</button>
+        </div>
+        <div class="foot"></div>
+    </div>
+</form>
+

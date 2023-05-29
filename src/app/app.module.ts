@@ -14,6 +14,9 @@ import { BookCardComponent } from './component/book-card/book-card.component';
 import { PrimerpipePipe } from './pipes/primerpipe.pipe';
 import { AddBookComponent } from './pages/add-book/add-book.component';
 import { UpdateBookComponent } from './pages/update-book/update-book.component';
+import { LoginComponent } from './pages/login/login.component';
+import { FormLoginComponent } from './component/form-login/form-login.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -30,11 +33,15 @@ import { UpdateBookComponent } from './pages/update-book/update-book.component';
     PrimerpipePipe,
     AddBookComponent,
     UpdateBookComponent,
+    LoginComponent,
+    FormLoginComponent,
  
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
