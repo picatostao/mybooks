@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Book } from 'src/app/models/book';
 import { BooksService } from 'src/app/shared/books.service';
+import { ToastrService } from 'ngx-toastr';
 @Component({
   selector: 'app-books',
   templateUrl: './books.component.html',
@@ -9,14 +10,14 @@ import { BooksService } from 'src/app/shared/books.service';
 export class BooksComponent {
 
   public books:Book[]
-  constructor( public bookService:BooksService){
+  constructor( public bookService:BooksService, private toastrService:ToastrService){
   this.books=this.bookService.getAll()
 }
   public borrar(books:Book){
     let libros=this.bookService.delete(books.id_book)
     if (libros){
       this.books=this.bookService.getAll()
-      alert("NO! el libro se fue a freir esparragos!")
+      this.toastrService.show("NO! el libro se fue a freir esparragos!","MyBooks",{toastClass:"toastError"});
     }
 }
   public find(libro_1:string){
@@ -25,10 +26,7 @@ export class BooksComponent {
       this.books=[find1]
     }else{
       this.books=this.bookService.getAll()
-      alert("ID no existe.")
+      this.toastrService.show("ID no existe.","MyBooks",{toastClass:"toastError"});
     }
-    
-    
-      
   }
 }

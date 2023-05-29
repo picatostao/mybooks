@@ -2,6 +2,7 @@ import { Component,OnInit,Input,Output,EventEmitter } from '@angular/core';
 import { Book } from 'src/app/models/book';
 import { BooksService } from 'src/app/shared/books.service';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-update-book',
@@ -15,17 +16,17 @@ export class UpdateBookComponent  implements OnInit {
   public books:Book[];
   public findBook:Book;
   public updatedbook:Book;
-  constructor(public bookservice:BooksService, public router:Router){
+  constructor(public bookservice:BooksService, public router:Router, private toastrService:ToastrService){
 
   }
   search(id:number):void{
     this.findBook=this.bookservice.getOne(id);
     if(this.findBook){
       this.updatedbook={...this.findBook};
-      alert ("Listo para modificar.");
+      this.toastrService.show("Listo para modificar","MyBooks",{toastClass:"toast1"});
     }else{
       this.books=this.bookservice.getAll();
-      alert ("Id incorrecta.");
+      this.toastrService.show("ID no encontrada","MyBooks",{toastClass:"toastError"});
     }
   }
   updateBook(titleMod: string, typeMod: string, authorMod: string, priceMod: number, imageMod: string, idMod: number){
@@ -37,10 +38,11 @@ export class UpdateBookComponent  implements OnInit {
   this.updatedbook.id_book = idMod;
   if(this.bookservice.edit(this.updatedbook)){
     this.books = this.bookservice.getAll();
-    alert("Libro modificado");
+    // alert("Libro modificado");
+    this.toastrService.show("Libro modificado","MyBooks",{toastClass:"toast1"});
     this.router.navigateByUrl("/books");
   }else{
-    alert("imposible modificar el libro");
+    this.toastrService.show("imposible modificar el libro","MyBooks",{toastClass:"toastError"});
   }
  }
 }

@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { Book } from 'src/app/models/book';
 import { BooksService } from 'src/app/shared/books.service';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
+
 
 
 @Component({
@@ -12,7 +14,7 @@ import { Router } from '@angular/router';
 export class AddBookComponent {
 
   
-    constructor(public booksService:BooksService,  public router:Router){
+    constructor(public booksService:BooksService,  public router:Router , private toastrService:ToastrService){
       }
         newBook(newID: number,
                 newIDUser: number,
@@ -23,9 +25,9 @@ export class AddBookComponent {
                 newPhoto: string){
           let nuevo: Book = new Book(newID,newIDUser, newTitle,newType,newAuthor,newPrice,newPhoto)
           this.booksService.add(nuevo)
-          alert("Libro añadido");
+          this.toastrService.show("libro añadido","MyBooks",{toastClass:"toast1"})
+        
           this.router.navigateByUrl("/books");
-
 }
         }
         
