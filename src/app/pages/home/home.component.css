@@ -4,11 +4,22 @@
     background-color: var(--oscuro);
     text-align: center;
     align-items: center;
+    background-image:url("/assets/Picsart_23-05-22_16-24-09-895.png");
+    background-size:75% auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-y: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 .txt{
     color: white;
-    font-size: 100px;
-    font-family:var(--letra)}
+    font-size: 200px;
+    font-family:var(--letra);
+    background-color: var(--transp);
+};
+
 img{
     max-width: auto;
     max-height: 60%;

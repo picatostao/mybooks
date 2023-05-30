@@ -43,3 +43,7 @@ a{
 h1{
     font-family:var(--letra)
 }
+ .active{
+    background-color: white;
+    color: black;
+ }

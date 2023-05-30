@@ -26,7 +26,6 @@ export class AddBookComponent {
           let nuevo: Book = new Book(newID,newIDUser, newTitle,newType,newAuthor,newPrice,newPhoto)
           this.booksService.add(nuevo)
           this.toastrService.show("libro añadido","MyBooks",{toastClass:"toast1"})
-        
           this.router.navigateByUrl("/books");
 }
         }
