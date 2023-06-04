@@ -3,6 +3,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { EVENT_MANAGER_PLUGINS } from '@angular/platform-browser';
 import { Book } from 'src/app/models/book';
 
+
 @Component({
   selector: 'app-book-card',
   templateUrl: './book-card.component.html',
