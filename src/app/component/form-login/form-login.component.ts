@@ -10,9 +10,9 @@ import { User } from 'src/app/models/user';
 })
 export class FormLoginComponent {
 
-public logino:Logino
+public logino:User
 constructor(){
-this.logino=new Logino("","")
+this.logino=new User(0,"","","","","")
 }
 onSubmit(form:NgForm){
   console.log(this.logino)
