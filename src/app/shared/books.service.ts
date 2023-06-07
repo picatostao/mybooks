@@ -1,10 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Book } from '../models/book';
-import { Router } from '@angular/router';
-import { BooksComponent } from '../pages/books/books.component';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Respuesta } from '../models/respuesta';
+
 
 @Injectable({
   providedIn: 'root'
@@ -21,18 +19,19 @@ export class BooksService {
     //   new Book(119,119,"El capitán Alatriste","Tapa dura","Arturo Perez Reverte",15,"https://www.perezreverte.com/upload/fotos/libros/201002/alatristeanotado_med.jpg"),
     // ] 
   }
-  public getAll():Observable<Respuesta>{
-    return this.http.get<Respuesta>(this.url)
+  public getAll():Observable<object>{
+    return this.http.get<Book[]>(this.url)
   }
-  public getOne(id_book:number):Observable<Respuesta>{
-    return this.http.get<Respuesta>(this.url+"/"+id_book)
+  public getOne(id_book:number):Observable<object>{
+    return this.http.get(this.url+"/"+id_book)
     // return this.http.get(libro=>libro.id_book == id_book);
   }
-  public add(book:Book): Observable<Respuesta> {
-    return this.http.post<Respuesta>(this.url,+book)
+  public add(book:Book): Observable<object> {
+    return this.http.post(this.url,book)
   }
-  public edit(book:Book):Observable<Respuesta>{
-    return this.http.put<Respuesta>(this.url,book)
+  public edit(book:Book):Observable<object>{
+    return this.http.put(this.url,book)
+  }
 
     // let update=this.book_.findIndex(x=> x.id_book == book.id_book);
     // if(update!== -1){
@@ -40,9 +39,9 @@ export class BooksService {
     //   return true;
     // }
 
-  }
-  public delete(id_book:number):Observable<Respuesta>{
-    return this.http.delete<Respuesta>(this.url+"?id_book="+id_book )
+  
+  public delete(id_book:number):Observable<object>{
+    return this.http.delete<object>(this.url+"/"+id_book )
   //  this.book_=this.book_.filter(book1 => book1.id_book !== id_book);
   //  return true;
   }
