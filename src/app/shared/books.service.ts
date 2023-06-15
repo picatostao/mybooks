@@ -2,13 +2,14 @@ import { Injectable } from '@angular/core';
 import { Book } from '../models/book';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { User } from '../models/user';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class BooksService {
-  
+  public user:User
   public book_:Book[];
   private url:string='http://localhost:3000/books'
   constructor(private http:HttpClient) 
@@ -19,18 +20,18 @@ export class BooksService {
     //   new Book(119,119,"El capitán Alatriste","Tapa dura","Arturo Perez Reverte",15,"https://www.perezreverte.com/upload/fotos/libros/201002/alatristeanotado_med.jpg"),
     // ] 
   }
-  public getAll():Observable<object>{
-    return this.http.get<Book[]>(this.url)
+  public getAll(id_user:number):Observable<object>{
+    return this.http.get<Book[]>(this.url+"/"+id_user)
   }
-  public getOne(id_book:number):Observable<object>{
-    return this.http.get(this.url+"/"+id_book)
+  public getOne(id_user:number, id_book:number):Observable<object>{
+    return this.http.get(this.url+"/"+id_user+"/"+id_book)
     // return this.http.get(libro=>libro.id_book == id_book);
   }
-  public add(book:Book): Observable<object> {
-    return this.http.post(this.url,book)
+  public add(id_user:number,book:Book): Observable<object> {
+    return this.http.post(this.url+"/"+id_user,book)
   }
-  public edit(book:Book):Observable<object>{
-    return this.http.put(this.url,book)
+  public edit(id_user:number,book:Book):Observable<object>{
+    return this.http.put(this.url+"/"+id_user,book)
   }
 
     // let update=this.book_.findIndex(x=> x.id_book == book.id_book);

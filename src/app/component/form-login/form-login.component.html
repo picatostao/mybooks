@@ -5,7 +5,7 @@
             
             <div class="form-group">
             <h3  class="inf">CORREO ELECTRONICO</h3>
-            <input class="form-control" type="email" name="mail" [(ngModel)]="logino.email" #emailId="ngModel" 
+            <input class="form-control" type="email" name="email" [(ngModel)]="logino.email" #emailId="ngModel" 
             [ngClass]="{ 'is-invalid': (emailId.dirty || emailId.touched) && emailId.invalid }" email required>
             <div *ngIf="(emailId.dirty || emailId.touched) && emailId.invalid" class="invalid-feedback">
                 <div *ngIf="emailId.errors.required" style="color: white;font-family: var(--letra);">La dirección de email es obligatoria</div>
@@ -24,7 +24,7 @@
             </div>
             
             <br>
-            <button class="btn btn-danger btn-block" [disabled]="userForm.invalid">add</button>
+            <button class="btn btn-danger btn-block" [disabled]="userForm.invalid">Log</button>
         </div>
         <div class="foot"></div>
     </div>

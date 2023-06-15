@@ -4,7 +4,8 @@ export class User {
                 public last_name:string,
                 public email:string,
                 public photo:string,
-                public password:string){
+                public password:string,
+                ){
                     
                 };
                 public userInfo():string{
