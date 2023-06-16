@@ -24,15 +24,15 @@ export class AddBookComponent {
                 newAuthor: string,
                 newPrice: number,
                 newPhoto: string){
-          let nuevo: Book = new Book(newID,newIDUser, newTitle,newType,newAuthor,newPrice,newPhoto)
-          this.booksService.add(nuevo).subscribe((respuesta:Respuesta)=>{ 
-            if(!respuesta.error){
-              this.toastrService.show("libro añadido.","MyBooks",{toastClass:"toast1"})
-              this.router.navigateByUrl("/books");
-            }else
-            this.toastrService.show("error! libro no añadido.","MyBooks",{toastClass:"toastError"});
+          // let nuevo: Book = new Book(newID,newIDUser, newTitle,newType,newAuthor,newPrice,newPhoto)
+          // this.booksService.add(nuevo).subscribe((respuesta:Respuesta)=>{ 
+          //   if(!respuesta.error){
+          //     this.toastrService.show("libro añadido.","MyBooks",{toastClass:"toast1"})
+          //     this.router.navigateByUrl("/books");
+          //   }else
+          //   this.toastrService.show("error! libro no añadido.","MyBooks",{toastClass:"toastError"});
           
-          })
+          // })
 }
         }
         

@@ -23,6 +23,7 @@ onSubmit(form:NgForm){
     (respuesta : Respuesta)=>{  
       if(respuesta.data_user){
         this.userservice.logueado=true
+        this.userservice.user=respuesta.data_user[0]
         this.router.navigate(['books'])
       }else{
         console.log("los datos no coinciden");        

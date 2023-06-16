@@ -2,8 +2,7 @@
     <ng-container *ngIf="log; else loggedOutLinks">
         <a routerLink="/profile"><div class="nav" routerLinkActive="active"><h1>Profile</h1></div></a>
         <a routerLink="/books"><div class="nav" routerLinkActive="active" ><h1>books</h1></div></a>
-        <a routerLink="/addBook"><div class="nav" routerLinkActive="active"><h1>addBook</h1></div></a>
-        <a routerLink="/updateBook"><div class="nav" routerLinkActive="active"><h1>update</h1></div></a>
+
     </ng-container>
     <ng-template #loggedOutLinks>
         <a routerLink="/home"><div class="nav" routerLinkActive="active"><h1>Home</h1></div></a>
@@ -11,3 +10,7 @@
         <a routerLink="/login"><div class="nav" routerLinkActive="active"><h1>login</h1></div></a>
     </ng-template>
 </section>
+
+
+<!-- <a routerLink="/addBook"><div class="nav" routerLinkActive="active"><h1>addBook</h1></div></a>
+<a routerLink="/updateBook"><div class="nav" routerLinkActive="active"><h1>update</h1></div></a> -->

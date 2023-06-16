@@ -9,29 +9,29 @@
                             <div class="userPrint">
                                 <div class="marginX_"></div>
                                 <div class="datos">
-                                    <div class="photo"><img src="{{userID.photo}}" alt=""></div>
-                                        <div class="contain0">{{userID.userInfo()}}
+                                    <div class="photo"><img src="{{user?.photo}}" alt=""></div>
+                                        <div class="contain0">{{user?.name}} {{user?.last_name}}
                                         </div>
                                     <div class="dat">
-                                        <div class="contain1">ID-{{userID.id_user}}</div>
+                                        <div class="contain1"></div>
                                     </div>
                                     <div class="dat">
-                                        <div class="contain1">Name</div>
-                                        <div class="contain">
+                                        <div class="contain1" style="color: white;" >Nombre</div>
+                                        <div class="contain">{{user?.name}}
                                             <div class="minimarg"></div>
-                                            {{userID.name}}</div>
+                                           </div>
                                     </div>
                                     <div class="dat">
-                                        <div class="contain1">Last name</div>
-                                        <div class="contain">
+                                        <div class="contain1" style="color: white;">Apellido</div>
+                                        <div class="contain">{{user?.last_name}}
                                             <div class="minimarg"></div>
-                                            {{userID.last_name}}</div>
+                                           </div>
                                     </div>
                                     <div class="dat">
-                                        <div class="contain1">email</div>
-                                        <div class="contain">
+                                        <div class="contain1">Email</div>
+                                        <div class="contain">{{user?.email}}
                                             <div class="minimarg"></div>
-                                            {{userID.email}}</div>
+                                            </div>
                                     </div>
 
                             </div>
@@ -46,22 +46,27 @@
                             <div class="datos">
                                     <div class="contain0">Editar Datos</div>
                                 <div class="dat">
-                                    <div class="contain1">Name</div>
-                                    <input type="text" #input0>
+                                    <div class="contain1">Nombre</div>
+                                    <input type="text"  [(ngModel)]="name">
                                 </div>
                                 <div class="dat">
-                                    <div class="contain1">Last name</div>
-                                    <input type="text" #input1>
+                                    <div class="contain1">Apellido</div>
+                                    <input type="text" [(ngModel)]="last_name">
                                 </div>
                                 <div class="dat">
-                                    <div class="contain1">email</div>
-                                    <input type="text" #input2>
+                                    <div class="contain1">Email</div>
+                                    <input type="text" [(ngModel)]="email">
                                 </div>
                                 <div class="dat">
                                     <div class="contain1">Foto de perfil</div>
-                                    <input type="text" #input3>
+                                    <input type="text" [(ngModel)]="photo">
                                 </div>
-                                <div class="marginX_"><button on-click=cambiardatos(input0,input1,input2,input3)>CAMBIAR DATOS</button></div>
+                                <div class="dat">
+                                    <div class="contain1">email</div>
+                                    <input type="text" [(ngModel)]="email">
+                                </div>
+                                
+                                <div class="marginX_"><button (click)=cambiardatos()>CAMBIAR DATOS</button></div>
                             </div>
                         </div>
                     </div>

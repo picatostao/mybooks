@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from 'src/app/models/user';
+import { UserService } from 'src/app/shared/user.service';
 
 @Component({
   selector: 'app-my-profile',
@@ -7,17 +8,36 @@ import { User } from 'src/app/models/user';
   styleUrls: ['./my-profile.component.css']
 })
 export class MyProfileComponent{
-  public userID:User;
-  constructor(){
-    this.userID=new User(137, "Andrés","Martinez", "andresM@andres.es","https://cdn-icons-png.flaticon.com/512/3577/3577429.png", "1234");
+  name:string=''
+  last_name:string=''
+  email:string=''
+  photo:string=''
+  public user:User;
+  constructor(private userService:UserService){
+    this.user=this.userService.user
   } 
-  public cambiardatos(cambioName:HTMLInputElement,cambioLastName:HTMLInputElement,cambioEmail:HTMLInputElement,cambioFoto:HTMLInputElement){
-    
-    this.userID.name=cambioName.value;
-    this.userID.last_name=cambioLastName.value;
-    this.userID.email=cambioEmail.value;
-    this.userID.photo=cambioFoto.value;
+  public cambiardatos():void{
+    this.userService.update(this.user).subscribe(
+      (respuesta)=>{
+        console.log("perfil actualizado",respuesta)
+      },
+      (error)=>{
+        console.log("error al actualizar",error); 
+      }) 
   } 
 }
 
 
+
+
+
+
+
+// cambioName:HTMLInputElement,cambioLastName:HTMLInputElement,cambioEmail:HTMLInputElement,cambioFoto:HTMLInputElement
+
+
+
+ // this.userID.name=cambioName.value;
+    // this.userID.last_name=cambioLastName.value;
+    // this.userID.email=cambioEmail.value;
+    // this.userID.photo=cambioFoto.value;

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Logino } from 'src/app/models/logino';
+import { User } from 'src/app/models/user';
 
 @Component({
   selector: 'app-login',
@@ -8,4 +9,5 @@ import { Logino } from 'src/app/models/logino';
 })
 export class LoginComponent {
   public login:Logino
+  userLog:User
 }
