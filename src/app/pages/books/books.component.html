@@ -1,7 +1,7 @@
 <div class="fondo">
     <div class="inputs">
-    <input type="text" [(ngModel)]="buscar" placeholder="Book ID">
-            <button class="but" type="button"(click)="find(buscar)" >FIND YOUR BOOK</button>
+    <input type="text" [(ngModel)]="buscar" placeholder="Book ID" #id_book>
+            <button class="but" type="button"(click)="find(id_book)" >FIND YOUR BOOK</button>
         </div>
     <div class="margen">
         <ng-container *ngFor="let book of books;let i=index;let even = even">

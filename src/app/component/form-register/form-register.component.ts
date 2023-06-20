@@ -4,6 +4,8 @@ import { UserService } from 'src/app/shared/user.service';
 import { Respuesta } from 'src/app/models/respuesta';
 import { User } from 'src/app/models/user';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-form-register',
   templateUrl: './form-register.component.html',
@@ -12,7 +14,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 export class FormRegisterComponent 
 {
 public myForm:FormGroup;
-constructor(private formBuilder:FormBuilder, private userService:UserService)
+constructor(private formBuilder:FormBuilder, private userService:UserService, public toastrService:ToastrService, private router:Router)
 { 
   this.buildForm()
 }
@@ -36,13 +38,15 @@ public register():void
     email: this.myForm.get('email')?.value,
     photo: this.myForm.get('photo')?.value,
     password: password,
-    userInfo: function (): string {
-      throw new Error('error de implementación');
-    }
+    // userInfo: function (): string {
+    //   throw new Error('error de implementación');
+    // }
   }
   this.userService.register(user).subscribe({
     next:(response)=>{
       console.log("usuario registrado", response);
+      this.toastrService.show("usuario registrado correctamente","MyBooks",{toastClass:"toast1"})
+      this.router.navigate(['login'])
       
     },
     error:(error)=>{

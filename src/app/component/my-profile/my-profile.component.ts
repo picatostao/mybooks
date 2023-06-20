@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from 'src/app/models/user';
 import { UserService } from 'src/app/shared/user.service';
+import { Respuesta } from 'src/app/models/respuesta';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-my-profile',
@@ -8,21 +10,36 @@ import { UserService } from 'src/app/shared/user.service';
   styleUrls: ['./my-profile.component.css']
 })
 export class MyProfileComponent{
+   public user:User;
   name:string=''
   last_name:string=''
   email:string=''
   photo:string=''
-  public user:User;
-  constructor(private userService:UserService){
+  password:string=""
+ 
+  constructor(private userService:UserService, public toastrService:ToastrService){
     this.user=this.userService.user
   } 
-  public cambiardatos():void{
+  public cambiardatos(newName:HTMLInputElement, newLast_name:HTMLInputElement, newEmail:HTMLInputElement, newPhoto:HTMLInputElement, newPassword:HTMLInputElement ){
+   
+   this.user ={
+    id_user: this.userService.user.id_user,
+    name:newName.value, 
+    last_name:newLast_name.value,
+    email:newEmail.value,
+    photo:newPhoto.value,
+    password:newPassword.value,
+   }
+   
     this.userService.update(this.user).subscribe(
-      (respuesta)=>{
+      (respuesta:Respuesta)=>{
         console.log("perfil actualizado",respuesta)
+        this.toastrService.show("usuario actualizado correctamente","MyBooks",{toastClass:"toast1"})
       },
       (error)=>{
-        console.log("error al actualizar",error); 
+        console.log("error al actualizar",error);
+        this.toastrService.show("usuario o contraseña incorrectos","MyBooks",{toastClass:"toastError"}
+        ) 
       }) 
   } 
 }

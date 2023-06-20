@@ -47,26 +47,26 @@
                                     <div class="contain0">Editar Datos</div>
                                 <div class="dat">
                                     <div class="contain1">Nombre</div>
-                                    <input type="text"  [(ngModel)]="name">
+                                    <input type="text"  [(ngModel)]="name" #iname>
                                 </div>
                                 <div class="dat">
                                     <div class="contain1">Apellido</div>
-                                    <input type="text" [(ngModel)]="last_name">
+                                    <input type="text" [(ngModel)]="last_name" #ilastname>
                                 </div>
                                 <div class="dat">
                                     <div class="contain1">Email</div>
-                                    <input type="text" [(ngModel)]="email">
+                                    <input type="text" [(ngModel)]="email" #iemail>
                                 </div>
                                 <div class="dat">
                                     <div class="contain1">Foto de perfil</div>
-                                    <input type="text" [(ngModel)]="photo">
+                                    <input type="text" [(ngModel)]="photo" #iphoto>
                                 </div>
                                 <div class="dat">
-                                    <div class="contain1">email</div>
-                                    <input type="text" [(ngModel)]="email">
+                                    <div class="contain1">password</div>
+                                    <input type="text" [(ngModel)]="password" #ipassword>
                                 </div>
                                 
-                                <div class="marginX_"><button (click)=cambiardatos()>CAMBIAR DATOS</button></div>
+                                <div class="marginX_"><button (click)=cambiardatos(iname,ilastname,iemail,iphoto,ipassword)>CAMBIAR DATOS</button></div>
                             </div>
                         </div>
                     </div>

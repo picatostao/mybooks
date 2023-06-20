@@ -10,13 +10,17 @@ import { Respuesta } from 'src/app/models/respuesta';
   styleUrls: ['./books.component.css']
 })
 export class BooksComponent {
-  
   public books:Book[]
   public buscar:string
   constructor( public bookService:BooksService, private toastrService:ToastrService ){
-  this.bookService.getAll().subscribe((data)=>{
-  this.books=data as Book[]})
+  this.books=[]
+  this.bookService.getAll().subscribe((respuesta:Respuesta)=>{
+    
+  this.books=respuesta.data
+console.log(this.books);
+ } )
 }
+
 
   public borrar(books:Book){
     this.bookService.delete(books.id_book).subscribe(()=>{
@@ -25,17 +29,20 @@ export class BooksComponent {
         );
       })
 }
-  public find(id_book:string){
+  public find(id_book:HTMLInputElement){
     
     if (id_book){
-      let bookId=parseInt(id_book)
-      this.bookService.getOne(bookId).subscribe((book:Book)=>{
-        if(book){
-          this.books=[book]
+      let bookId=parseInt(id_book.value)
+      this.bookService.getOne(bookId).subscribe((respuesta:Respuesta)=>{
+        if(respuesta.data){
+          this.books= respuesta.data
+          console.log(this.books)
         }else{
           this.toastrService.show("ID no existe.","MyBooks",{toastClass:"toastError"})
-      this.bookService.getAll().subscribe((data:Book[])=>{ 
-      this.books=data;
+          this.bookService.getAll().subscribe((respuesta:Respuesta)=>{
+    
+            this.books=respuesta.data
+            
     })
   }
 })

@@ -1,5 +1,6 @@
 import { NgForm } from '@angular/forms'; 
 import { Component, OnInit } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 
 import { User } from 'src/app/models/user';
 import { Router } from '@angular/router';
@@ -15,7 +16,7 @@ import { Respuesta } from 'src/app/models/respuesta';
 export class FormLoginComponent {
 
 public logino:User
-constructor(private userservice:UserService, private router:Router){
+constructor(private userservice:UserService, private router:Router, private toastrService:ToastrService){
 this.logino=new User(0,"","","","","")
 }
 onSubmit(form:NgForm){
@@ -25,8 +26,12 @@ onSubmit(form:NgForm){
         this.userservice.logueado=true
         this.userservice.user=respuesta.data_user[0]
         this.router.navigate(['books'])
+        this.toastrService.show("bienvenido"+" "+this.userservice.user.email,"MyBooks",{toastClass:"toast1"})
       }else{
-        console.log("los datos no coinciden");        
+        console.log("los datos no coinciden");
+        this.toastrService.show("usuario o contraseña incorrectos","MyBooks",{toastClass:"toastError"}
+        ) 
+               
       }
     },
     

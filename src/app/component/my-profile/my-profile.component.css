@@ -122,12 +122,14 @@
     font-family:var(--letra)
 }
 .contain{
-    height: 20px;
+    height: 30px;
     width: 200px;
     border: 1px solid white;
     color: white;
     text-align:justify;
     align-items:flex start;
+    justify-content: space-around;
+    
     display: flex;
     flex-direction: row;
     border-radius: 20px;

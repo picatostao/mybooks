@@ -8,8 +8,8 @@ export class User {
                 ){
                     
                 };
-                public userInfo():string{
-                    return this.name+" "+this.last_name
-                }
+                // public userInfo():string{
+                //     return this.name+" "+this.last_name
+                // }
                
             }

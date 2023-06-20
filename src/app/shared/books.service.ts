@@ -21,19 +21,19 @@ export class BooksService {
     this.user=null
   }
 
-  public getAll():Observable<Book[]>{
+  public getAll(){
     let id_user=this.userservice.user.id_user
-    return this.http.get<Book[]>(this.url+"/"+id_user)
+    return this.http.get(this.url+"/"+id_user)
   }
 
-  public getOne(id_book:number):Observable<object>{
+  public getOne(id_book:number){
     let id_user=this.userservice.user.id_user
-    return this.http.get<Book>(this.url+"/"+id_user+"/"+id_book)
+    return this.http.get(this.url+"/"+id_user+"/"+id_book)
   }
 
-  public delete(id_book:number):Observable<object>{
+  public delete(id_book:number){
     let id_user=this.userservice.user.id_user
-    return this.http.delete<object>(this.url+"/"+id_user+"/"+id_book)
+    return this.http.delete(this.url+"/"+id_user+"/"+id_book)
   }
 
 
